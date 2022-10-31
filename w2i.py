@@ -4,14 +4,8 @@ import requests
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
 
-def h2():
-    return 'Sreing 2'
-
-@app.route('/w2m/word=<string:quarry>', methods=['GET', 'POST','OPTIONS'])
+@app.route('/word=<string:quarry>', methods=['GET', 'POST','OPTIONS'])
 
 def req(quarry):
     quarry = quarry.lower()
